@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>事業計画書（パート1・パート2）｜株式会社佐藤土木測量設計事務所</title>
+<style>
+  :root{--primary:#1a3a5c;--accent:#2980b9;--light-bg:#f0f4f8;--border:#d0d8e0;--text:#2c3e50;--white:#fff;--warn:#e67e22;--success:#27ae60;--red:#c0392b}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:"Noto Sans JP","Yu Gothic","Meiryo",sans-serif;color:var(--text);background:#e8edf2;line-height:1.85;font-size:14px}
+  .page{max-width:960px;margin:30px auto;background:var(--white);box-shadow:0 2px 20px rgba(0,0,0,.08);border-radius:8px;overflow:hidden}
+  .header{background:linear-gradient(135deg,var(--primary),#2c5f8a);color:var(--white);padding:40px 50px}
+  .header h1{font-size:24px;font-weight:700;margin-bottom:8px}
+  .header .sub{font-size:14px;opacity:.85}
+  .header .badge{display:inline-block;background:rgba(255,255,255,.2);padding:4px 14px;border-radius:20px;font-size:12px;margin-top:12px}
+  .body{padding:40px 50px}
+  .section-num{display:inline-block;background:var(--primary);color:var(--white);width:32px;height:32px;text-align:center;line-height:32px;border-radius:50%;font-size:14px;font-weight:700;margin-right:10px;flex-shrink:0}
+  h2{display:flex;align-items:center;font-size:18px;color:var(--primary);margin:44px 0 20px;padding-bottom:10px;border-bottom:3px solid var(--accent)}
+  h2:first-child{margin-top:0}
+  h3{font-size:15px;color:var(--accent);margin:32px 0 14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h4{font-size:14px;color:var(--primary);margin:22px 0 8px;font-weight:700}
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13px}
+  th,td{border:1px solid var(--border);padding:10px 14px;text-align:left;vertical-align:top}
+  th{background:var(--primary);color:var(--white);font-weight:600;font-size:12px;white-space:nowrap}
+  tr:nth-child(even) td{background:#f8fafc}
+  .total-row td{background:#eaf2f8!important;font-weight:700}
+  .info-grid{display:grid;grid-template-columns:160px 1fr;gap:0;border:1px solid var(--border);border-radius:6px;overflow:hidden;margin:16px 0}
+  .info-grid dt{background:var(--light-bg);padding:10px 16px;font-weight:600;font-size:13px;border-bottom:1px solid var(--border)}
+  .info-grid dd{padding:10px 16px;border-bottom:1px solid var(--border)}
+  .info-grid dt:last-of-type,.info-grid dd:last-of-type{border-bottom:none}
+  .plan-name{background:var(--light-bg);border-left:5px solid var(--accent);padding:20px 24px;margin:16px 0;font-size:20px;font-weight:700;color:var(--primary)}
+  .overview-box{background:#fefefe;border:2px solid var(--accent);border-radius:8px;padding:20px 24px;margin:16px 0;font-size:15px;line-height:2}
+  .swot{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+  .swot-card{border-radius:8px;padding:16px 20px;font-size:13px}
+  .swot-card h4{margin:0 0 10px;font-size:14px}
+  .swot-card ul{padding-left:18px}
+  .swot-card li{margin-bottom:6px}
+  .swot-s{background:#eaf7ed;border:1px solid #a3d9b1}.swot-s h4{color:#1e8449}
+  .swot-w{background:#fdecea;border:1px solid #f1a9a0}.swot-w h4{color:#c0392b}
+  .swot-o{background:#eaf4fd;border:1px solid #93c5f5}.swot-o h4{color:#2471a3}
+  .swot-t{background:#fef5e7;border:1px solid #f0c27a}.swot-t h4{color:#b7791f}
+  .equip-card{background:var(--light-bg);border-radius:8px;padding:24px;margin:20px 0;border:1px solid var(--border)}
+  .equip-card .equip-title{font-size:16px;font-weight:700;color:var(--primary);margin-bottom:4px}
+  .equip-card .equip-price{font-size:20px;font-weight:700;color:var(--accent);margin-bottom:12px}
+  .equip-card .equip-vendor{font-size:12px;color:#666;margin-bottom:12px}
+  .ba-compare{display:grid;grid-template-columns:1fr 60px 1fr;gap:0;margin:16px 0;align-items:stretch}
+  .ba-box{border-radius:8px;padding:18px 20px;font-size:13px}
+  .ba-before{background:#fdecea;border:1px solid #f1a9a0}
+  .ba-after{background:#eaf7ed;border:1px solid #a3d9b1}
+  .ba-arrow{display:flex;align-items:center;justify-content:center;font-size:28px;color:var(--accent);font-weight:700}
+  .ba-box .ba-label{font-weight:700;font-size:13px;margin-bottom:8px}
+  .ba-before .ba-label{color:var(--red)}.ba-after .ba-label{color:var(--success)}
+  .ba-box .big-num{font-size:22px;font-weight:700;margin:4px 0}
+  .metric-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
+  .metric-card{background:var(--light-bg);border-radius:8px;padding:20px;text-align:center;border:1px solid var(--border)}
+  .metric-card .metric-value{font-size:28px;font-weight:700;color:var(--accent)}
+  .metric-card .metric-label{font-size:12px;color:#666;margin-top:4px}
+  .highlight-box{background:#eaf4fd;border:1px solid #93c5f5;border-radius:8px;padding:20px 24px;margin:16px 0}
+  .highlight-box h4{color:var(--accent);margin-top:0}
+  .warn-box{background:#fef9e7;border:1px solid #f9e79f;border-radius:8px;padding:16px 20px;margin:16px 0;font-size:13px}
+  .tbd{color:#c0392b;font-weight:700;background:#fdecea;padding:2px 8px;border-radius:4px;font-size:12px}
+  .ict-tag{display:inline-block;background:#2980b9;color:#fff;padding:2px 10px;border-radius:12px;font-size:11px;margin-right:4px;margin-bottom:4px}
+  .checklist{background:#fef5e7;border:2px solid var(--warn);border-radius:8px;padding:24px;margin:24px 0}
+  .checklist h3{border:none;padding:0;color:var(--warn);margin:0 0 12px}
+  .checklist ul{list-style:none;padding:0}
+  .checklist li{padding:6px 0 6px 28px;position:relative;font-size:13px}
+  .checklist li::before{content:"\2610";position:absolute;left:4px;font-size:16px;color:var(--warn)}
+  .timeline{margin:16px 0;padding-left:20px;border-left:3px solid var(--accent)}
+  .timeline .tl-item{padding:8px 0 8px 20px;position:relative;font-size:13px}
+  .timeline .tl-item::before{content:"";width:12px;height:12px;background:var(--accent);border-radius:50%;position:absolute;left:-27px;top:13px}
+  .timeline .tl-date{font-weight:700;color:var(--primary);min-width:150px;display:inline-block}
+  .footer{background:var(--light-bg);padding:20px 50px;font-size:12px;color:#888;text-align:center;border-top:1px solid var(--border)}
+  p{margin:8px 0}ul,ol{margin:8px 0 8px 20px}li{margin-bottom:4px}
+  @media print{body{background:#fff}.page{box-shadow:none;margin:0}}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="header">
+  <h1>事業計画書（パート1・パート2）</h1>
+  <div class="sub">中小企業省力化投資補助金（一般型）第6回公募</div>
+  <span class="badge">DRAFT v2.0 ｜ 2026年4月16日作成</span>
+</div>
+<div class="body">
+
+<h2><span class="section-num">1</span>事業者情報</h2>
+<dl class="info-grid">
+  <dt>商号又は名称</dt><dd>株式会社佐藤土木測量設計事務所</dd>
+  <dt>代表者</dt><dd>代表取締役　佐藤 圭亮</dd>
+  <dt>本社所在地</dt><dd>宮城県石巻市蛇田字新西境谷地99-7</dd>
+  <dt>業種</dt><dd>測量業・土木設計（日本標準産業分類：742 土木建築サービス業）</dd>
+  <dt>設立年月日</dt><dd>1975年3月18日（創業51年）</dd>
+  <dt>資本金</dt><dd>60,000,000円</dd>
+  <dt>役員数／従業員数</dt><dd>役員3名 ／ 常勤従業員39名（計42名）</dd>
+  <dt>ホームページ</dt><dd><span class="tbd">要確認</span></dd>
+</dl>
+
+<h2><span class="section-num">2</span>事業計画名</h2>
+<div class="plan-name">ICT測量機器導入による測量業務の省力化と高度化</div>
+
+<h2><span class="section-num">3</span>事業計画の概要</h2>
+<div class="overview-box">船載マルチビーム測量機とドローン搭載レーザー測量機の2設備を組み合わせて導入し、水底面・地表面の3D測量を大幅に省力化。ICT計測で高精度データを取得し、新分野開拓と生産性向上を実現する。</div>
+
+<h2><span class="section-num">4</span>導入予定の機械装置等の名称と金額</h2>
+
+<div class="equip-card">
+  <div class="equip-title">設備A：SeaBat T50-P マルチビーム測量システム</div>
+  <div class="equip-price">税抜 41,142,000円（値引後）</div>
+  <div class="equip-vendor">発注予定先：株式会社ハイドロシステム開発（HSDI）｜担当：松田智子｜見積日：2026.2.17</div>
+  <table>
+    <tr><th>構成機器</th><th style="width:140px">金額（税抜）</th></tr>
+    <tr><td>ソナー本体 SeaBat T50-P（1x1度、1024ビーム）</td><td style="text-align:right">31,200,000</td></tr>
+    <tr><td>姿勢動揺制御＋GNSSコンパス NavisightEkinox防水型</td><td style="text-align:right">9,230,000</td></tr>
+    <tr><td>ポータブル船上局（PSP）＋ケーブル</td><td style="text-align:right">2,300,000</td></tr>
+    <tr><td>後処理ソフト Qinertia Pro</td><td style="text-align:right">2,200,000</td></tr>
+    <tr><td>搭載ボート H-boat＋ランチャー</td><td style="text-align:right">2,000,000</td></tr>
+    <tr><td>船首水中速度計 swiftSVP</td><td style="text-align:right">1,650,000</td></tr>
+    <tr><td>X-range</td><td style="text-align:right">1,500,000</td></tr>
+    <tr><td>リアルタイム音速度計 SVP70</td><td style="text-align:right">1,350,000</td></tr>
+    <tr><td>現場PC（制御・データ収録）</td><td style="text-align:right">575,000</td></tr>
+    <tr><td>初回トレーニング（2名 x 3〜4日）</td><td style="text-align:right">400,000</td></tr>
+    <tr><td style="color:#c0392b">値引き（10%＋50%対象品）</td><td style="text-align:right;color:#c0392b">△6,348,000</td></tr>
+    <tr class="total-row"><td>合計（税抜・値引後）</td><td style="text-align:right">41,142,000</td></tr>
+  </table>
+</div>
+
+<div class="equip-card">
+  <div class="equip-title">設備B：mdLiDAR3 ドローン搭載レーザー測量システム</div>
+  <div class="equip-price">税抜 28,130,000円</div>
+  <div class="equip-vendor">発注予定先：金井度量衡株式会社｜注文書発行済（2026.1.13）</div>
+  <table>
+    <tr><th>構成</th><th style="width:140px">金額（税抜）</th></tr>
+    <tr><td>mdLiDAR3 本体（APX20搭載）</td><td style="text-align:right">26,800,000</td></tr>
+    <tr><td>ナビゲイトキャリブレーション作業費</td><td style="text-align:right">800,000</td></tr>
+    <tr><td>精密測検・横転確認作業費</td><td style="text-align:right">300,000</td></tr>
+    <tr><td>納入時経費（検収2名 x 1泊2日）</td><td style="text-align:right">200,000</td></tr>
+    <tr><td style="color:#c0392b">調整</td><td style="text-align:right;color:#c0392b">△70,000</td></tr>
+    <tr class="total-row"><td>合計（税抜）</td><td style="text-align:right">28,130,000</td></tr>
+  </table>
+</div>
+
+<table>
+  <tr><th>項目</th><th style="width:200px">金額</th></tr>
+  <tr><td>補助対象経費 合計（税抜）</td><td style="text-align:right;font-weight:700">69,272,000円</td></tr>
+  <tr><td>補助金申請額（補助率1/2、上限3,000万円）</td><td style="text-align:right;font-weight:700;color:#2980b9">30,000,000円</td></tr>
+  <tr><td>自己負担額（税抜）</td><td style="text-align:right">39,272,000円</td></tr>
+</table>
+
+<h2><span class="section-num">5</span>具体的な取組内容</h2>
+
+<h3>1. 事業者の概要（現状分析・経営課題）</h3>
+
+<div class="highlight-box" style="background:#fff8e1;border-color:#f9e79f">
+  <h4 style="color:#b7791f">本事業における「デジタル技術を活用した専用設備」の位置づけ</h4>
+  <p>本事業で導入する2設備は、それぞれGNSS/INS・LiDAR・マルチビームソナーといった<strong>ICT・IoT・センサー技術</strong>を中核とする高度なデジタル計測システムである。いずれも当社の業務環境（宮城県沿岸部の河川・港湾・山岳地形）に応じて、周辺機器の構成を個別に選定・組み合わせている。</p>
+  <p><strong>「水底面3D計測（マルチビーム）」と「地表面3D計測（ドローンレーザー）」を組み合わせて同時導入</strong>することで、単体導入では実現できない高い省力化効果と付加価値を生み出す。これは公募要領に定める「省力化に資する設備を組み合わせて複数導入することでより高い省力化効果や付加価値を生み出す」取組みに該当する。</p>
+</div>
+
+<h4>直近業績推移</h4>
+<table>
+  <tr><th>項目</th><th>50期（R6.3）</th><th>51期（R7.3）</th><th>52期（R8.3）見込</th></tr>
+  <tr><td>売上高</td><td><span class="tbd">要確認※</span></td><td style="text-align:right">479,644,489円</td><td><span class="tbd">要確認</span></td></tr>
+  <tr><td>営業利益</td><td><span class="tbd">要確認※</span></td><td style="text-align:right;color:#c0392b">△16,722,259円</td><td><span class="tbd">要確認</span></td></tr>
+  <tr><td>経常利益</td><td><span class="tbd">要確認※</span></td><td style="text-align:right">669,720円</td><td><span class="tbd">要確認</span></td></tr>
+  <tr><td>当期純利益</td><td><span class="tbd">要確認※</span></td><td style="text-align:right">10,303,719円</td><td><span class="tbd">要確認</span></td></tr>
+</table>
+<div class="warn-box">※50期データはスキャンPDFのため未抽出。提出前に必ず数値化が必要。<br>参考：2022.3月期は売上6.7億円、営業利益1.75億円</div>
+
+<h4>事業構成</h4>
+<table>
+  <tr><th style="width:120px">区分</th><th>内容</th></tr>
+  <tr><td>受注比率</td><td>入札受注 <strong>3</strong> ： 大手コンサル下請受注 <strong>7</strong>（パシフィックコンサルタンツ、建設技術研究所、日本工営グループ等）</td></tr>
+  <tr><td>業務比率</td><td>設計 <strong>3</strong> ： 測量 <strong>7</strong></td></tr>
+  <tr><td>利益構造</td><td>県内案件＝外注不要で高利益率。県外案件（秋田・名古屋）＝赤字傾向→名古屋は撤退方向</td></tr>
+</table>
+
+<h4>1-1　現状分析（SWOT分析）</h4>
+<div class="swot">
+  <div class="swot-card swot-s"><h4>強み（Strength）</h4><ul>
+    <li>創業51年の実績と信頼。宮城県内の公共測量・土木設計で確固たる地位</li>
+    <li>測量部門＋設計部門の2部門体制で一気通貫のサービス提供</li>
+    <li>測量士・測量士補の有資格者を多数擁する高い技術力</li>
+    <li><strong>ドローン操縦資格保有者5名在籍済み</strong>（二等技能証明2名、民間資格3名）→即応体制あり</li>
+    <li>県内案件は自社完結＝高利益率を確保できる体制</li>
+    <li>純資産8.2億円、現金預金約3億円の安定した財務基盤</li>
+  </ul></div>
+  <div class="swot-card swot-w"><h4>弱み（Weakness）</h4><ul>
+    <li>51期は営業赤字△1,672万円。秋田県災害関連業務の外注費増と名古屋案件の赤字が主因</li>
+    <li>工業高校等に出向いて採用活動するも人材確保が不十分。測量士への内定辞退も発生</li>
+    <li>従来型測量手法（TS測量・ロッド測量）への依存度が高く、ICT化が遅れている</li>
+    <li>人件費比率が高止まり（給与支給総額1.79億÷売上4.8億＝37%）</li>
+  </ul></div>
+  <div class="swot-card swot-o"><h4>機会（Opportunity）</h4><ul>
+    <li>国交省i-Construction政策でICT測量が公共工事の標準に。3D計測データの需要が急拡大</li>
+    <li>全国的なインフラ老朽化で調査・点検・維持管理需要が増大</li>
+    <li>河川・海洋調査、防災・減災対策への高精度3D測量ニーズの高まり</li>
+    <li>BIM/CIM普及で3D点群データを起点とした設計・施工管理需要が拡大</li>
+  </ul></div>
+  <div class="swot-card swot-t"><h4>脅威（Threat）</h4><ul>
+    <li>宮城県内の公共入札が一般競争入札化→落札件数が減少傾向</li>
+    <li>測量業界全体で人材確保が困難。労働力獲得競争が激化</li>
+    <li>競合のICT化進展（県内：ダイワ技研等）。ドローン写真測量は一般化済み</li>
+    <li>測量業界全体が縮小傾向。従来型業務のみでは持続的成長困難</li>
+  </ul></div>
+</div>
+
+<h4>1-2　経営課題</h4>
+<p>最大の経営課題は、<strong>第51期の営業赤字△16,722,259円の早期解消</strong>と持続的な利益成長体制の構築である。</p>
+<table>
+  <tr><th style="width:40px">No</th><th>赤字の主因</th></tr>
+  <tr><td>1</td><td>秋田県の災害関連業務で遠隔地対応の外注費・出張費が嵩み収益を圧迫</td></tr>
+  <tr><td>2</td><td>名古屋案件も県外対応コストが売上を上回る赤字構造（現在撤退方向で整理中）</td></tr>
+  <tr><td>3</td><td>従来型測量手法は6名体制×数日が標準で人件費比率が37%に高止まり</td></tr>
+</table>
+<h4>経営改善方針</h4>
+<ol>
+  <li><strong>県外赤字事業の整理</strong>：名古屋案件からの撤退を推進し赤字要因を排除</li>
+  <li><strong>県内案件の受注拡大</strong>：自社完結で高利益率の県内案件に経営資源を集中</li>
+  <li><strong>ICT測量機器の導入による省力化</strong>：1案件あたりの必要工数を大幅に削減し、同一人員でより多くの案件を処理可能にする</li>
+  <li><strong>新分野進出</strong>：BIM/CIM対応、インフラ点検等の高付加価値業務で売上を多角化</li>
+  <li><strong>人材の採用・定着</strong>：2026年度は新卒1名・中途1名を採用済み。ICT環境で採用力も強化</li>
+</ol>
+
+<h4>1-3　省力化補助金活用の動機・目的</h4>
+<div class="highlight-box"><h4>第一：深刻化する人手不足への構造的対応</h4>
+<p>測量業界全体で技術者の確保が困難化している中、当社も採用活動に苦戦し、直近では測量士資格保有者への内定辞退が発生。従来型手法では1案件に6人×数日を要するが、この人員体制は今後さらに維持困難となる。ICT測量機器の導入により<strong>少人数・短期間</strong>で同等以上の成果を出せる体制を構築し、人手不足を設備投資で構造的に解消する。</p></div>
+<div class="highlight-box"><h4>第二：i-Construction対応の緊急性</h4>
+<p>国交省はi-Constructionを推進し、公共工事でのICT活用を標準化しつつある。ドローンレーザー測量は大手の一部のみ、マルチビームはさらに導入率が低い。<strong>他社が未参入のこの時期に2設備を同時導入し、宮城県内での先行者優位を確立する</strong>ことが競争戦略上の急務。</p></div>
+<div class="highlight-box"><h4>第三：営業利益の改善</h4>
+<p>ドローンレーザーは作業日数を<strong>45日→1.5日（96.7%削減）</strong>、マルチビームは人員を<strong>6人→4人かつ時間を半減</strong>。この大幅な省力化で人件費比率を下げ、第51期の営業赤字を早期に解消する。</p></div>
+<div class="highlight-box"><h4>第四：省力化で生まれるリソースの高付加価値業務への再配置</h4>
+<p>省力化で捻出した人的リソースをBIM/CIM対応・インフラ点検・災害調査等の高付加価値業務に振り向け、業務範囲と受注量を拡大する。</p></div>
+
+<h3>2. 省力化投資の具体的内容</h3>
+
+<h4>設備A：マルチビームのICT/デジタル技術</h4>
+<p><span class="ict-tag">GNSS衛星測位</span><span class="ict-tag">INS慣性航法</span><span class="ict-tag">マルチビームソナー</span><span class="ict-tag">リアルタイムセンサー補正</span><span class="ict-tag">3D点群データ自動生成</span></p>
+<table>
+  <tr><th style="width:180px">ICT/IoT/センサー要素</th><th>技術内容と省力化への寄与</th></tr>
+  <tr><td><strong>GNSS＋INS姿勢動揺制御</strong><br>(NavisightEkinox)</td><td>GPS/GLONASS等の複数衛星測位と慣性計測装置(IMU)を統合。船体の揺れ・傾きをリアルタイムに検知・補正し、3D座標をセンチメートル精度で自動算出。従来は人手で行っていた潮位・波浪補正を<strong>完全自動化</strong>。</td></tr>
+  <tr><td><strong>マルチビームソナー</strong><br>(1024ビーム同時照射)</td><td>音響パルスを扇状に1024本同時照射し水底面を<strong>面的に高密度スキャン</strong>。従来のシングルビーム（1点ずつ手動計測）に比べデータ量が桁違いに増大し、測線間の補間作業が不要に。</td></tr>
+  <tr><td><strong>リアルタイム音速度補正</strong><br>(SVP70 + swiftSVP)</td><td>水中の温度・塩分濃度による音速変動をリアルタイムセンサーで自動検知・補正。従来の手動プロファイル取得を<strong>連続自動モニタリング</strong>に置換。</td></tr>
+  <tr><td><strong>後処理ソフト</strong><br>(Qinertia Pro)</td><td>INSデータとソナーデータを統合後処理しノイズ除去・座標変換を自動実行。BIM/CIM連携可能な3D点群データを<strong>デジタル出力</strong>。手作業の図面化を大幅省力化。</td></tr>
+</table>
+
+<h4>設備B：ドローンレーザーのICT/デジタル技術</h4>
+<p><span class="ict-tag">LiDARレーザー計測</span><span class="ict-tag">GNSS/INS統合測位</span><span class="ict-tag">自動飛行制御</span><span class="ict-tag">地表面自動分類</span><span class="ict-tag">3D点群データ自動生成</span></p>
+<table>
+  <tr><th style="width:180px">ICT/IoT/センサー要素</th><th>技術内容と省力化への寄与</th></tr>
+  <tr><td><strong>LiDAR</strong><br>(mdLiDAR3)</td><td>レーザーパルスを毎秒数十万点照射し反射光の往復時間から距離を自動算出。<strong>樹木を透過して地表面データを取得</strong>可能。写真測量との決定的差別化要素。人が入山することなく正確な地形データを取得。</td></tr>
+  <tr><td><strong>GNSS/INS統合測位</strong><br>(APX20)</td><td>衛星測位と慣性計測を融合し、飛行中の位置と姿勢を<strong>センチメートル精度で連続記録</strong>。各レーザーパルスの照射方向と位置を自動逆算。従来のTS測量で人力移動していた作業を<strong>リモートセンシングに完全置換</strong>。</td></tr>
+  <tr><td><strong>自動飛行制御</strong></td><td>飛行計画を作成するとドローンが計画に沿って<strong>自動飛行</strong>しレーザースキャンを実行。人手は離着陸時の安全監視のみ。</td></tr>
+</table>
+
+<h4>2設備の組合せが生む独自の価値</h4>
+<div class="highlight-box">
+  <p><strong>「水底面（マルチビーム）」＋「地表面（ドローンレーザー）」</strong>の同時導入により：</p>
+  <ul>
+    <li><strong>河床の水底地形</strong>→マルチビームで水面上から自動スキャン</li>
+    <li><strong>両岸の斜面・植生下地形</strong>→ドローンレーザーで上空から自動スキャン</li>
+    <li><strong>統合3Dモデル</strong>→2つの点群データを座標系統一して結合</li>
+  </ul>
+  <p>この<strong>水陸シームレスな3Dデータ</strong>はインフラ点検・災害調査・BIM/CIMに直接活用可能。<strong>宮城県内で同等のサービスを提供できる事業者はほぼ存在しない</strong>当社固有の競争優位性。</p>
+</div>
+
+<h4>2-1　ビフォーアフター</h4>
+<p style="font-weight:700;margin-top:20px">マルチビーム測量（深浅測量100m区間・5横断側線）</p>
+<div class="ba-compare">
+  <div class="ba-box ba-before"><div class="ba-label">導入前（ロッド測量）</div><div class="big-num">6人工 x 1〜1.5日</div><p>作業員が水中に入り各測点で手動データ記録。安全リスク大。天候・水流で中断。</p></div>
+  <div class="ba-arrow">→</div>
+  <div class="ba-box ba-after"><div class="ba-label">導入後（マルチビーム）</div><div class="big-num">4人工 x 半日</div><p>船上から1024ビームで面的自動スキャン。セッティング2h＋計測1.5〜2h。入水完全不要。</p></div>
+</div>
+
+<p style="font-weight:700;margin-top:28px">ドローンレーザー測量（陸上測量 0.31km&sup2;）</p>
+<div class="ba-compare">
+  <div class="ba-box ba-before"><div class="ba-label">導入前（TS測量）</div><div class="big-num">3人工 x 45日</div><p>地上からTSを据付、各測点まで人力で移動して1点ずつ計測。急傾斜地での転落リスク。</p></div>
+  <div class="ba-arrow">→</div>
+  <div class="ba-box ba-after"><div class="ba-label">導入後（UAVレーザー）</div><div class="big-num">3人工 x 1.5日</div><p>ドローン自動飛行でレーザースキャン。入山不要で安全。樹木下の地表面も取得可能。</p></div>
+</div>
+
+<h4>2-2　省力化指数と効果</h4>
+<div class="warn-box">省力化指数 ＝（導入前時間 − 導入後時間 − 新たに発生する時間）÷ 導入前時間</div>
+<table>
+  <tr><th>項目</th><th>ドローンレーザー<br>(陸上0.31km&sup2;)</th><th>マルチビーム<br>(深浅100m/5横断)</th></tr>
+  <tr><td>導入前の作業時間</td><td style="text-align:right">1,080h（3人x45日x8h）</td><td style="text-align:right">60h（6人x1.25日x8h）</td></tr>
+  <tr><td>導入後の作業時間</td><td style="text-align:right">36h（3人x1.5日x8h）</td><td style="text-align:right">16h（4人x0.5日x8h）</td></tr>
+  <tr><td>新たに発生する時間</td><td style="text-align:right"><span class="tbd">要算出</span></td><td style="text-align:right"><span class="tbd">要算出</span></td></tr>
+  <tr class="total-row"><td>省力化指数（後処理除く参考値）</td><td style="text-align:right;font-size:18px">96.7%</td><td style="text-align:right;font-size:18px">73.3%</td></tr>
+</table>
+<div class="warn-box"><strong>注意：</strong>確定値は「新たに発生する時間」を正確に見積もった上で事業計画書（その3）にて正式算出。第6回から投資回収期間の計算式に<strong>「年間稼働日数」が追加</strong>されたため新計算式にて算出します。<br>※1案件あたりの削減時間は佐藤土木様ご提供の実績データに基づく事実値。年間案件数は測量部門の過去実績をもとに精査の上その3に反映。</div>
+
+<h4>事業者全体への波及効果</h4>
+<table>
+  <tr><th style="width:40px"></th><th style="width:200px">波及効果</th><th>具体的内容</th></tr>
+  <tr><td>1</td><td><strong>受注キャパシティの拡大</strong></td><td>省力化で同一人員（39名）でより多くの案件を処理可能に。利益率の高い県内案件を選択的に拡大受注</td></tr>
+  <tr><td>2</td><td><strong>営業赤字の解消</strong></td><td>工数削減による直接的な人件費コスト低減。県外赤字案件の整理と合わせ営業黒字化</td></tr>
+  <tr><td>3</td><td><strong>作業の安全性向上</strong></td><td>水中入水作業、急峻地形での人力測量が不要に。災害現場での調査も安全に実施可能</td></tr>
+  <tr><td>4</td><td><strong>新規受注分野の開拓</strong></td><td>水底面＋地表面のシームレス3Dデータで、従来手法では不可能だった業務（水深2m以上の水底測量等）が新たに受注可能に</td></tr>
+  <tr><td>5</td><td><strong>採用競争力の向上</strong></td><td>最新ICT機器を保有する先進的企業として若手技術者への訴求力が向上</td></tr>
+</table>
+
+<h3>3. 省力化で生まれる経営資源の活用による新たな付加価値の創出</h3>
+<p>省力化で捻出される<strong>人的リソース（時間と労働力）</strong>を、以下の高付加価値業務に戦略的に振り向ける。</p>
+<table>
+  <tr><th style="width:40px"></th><th style="width:200px">施策</th><th>内容</th><th style="width:100px">市場の裏付け</th></tr>
+  <tr><td>1</td><td><strong>BIM/CIM対応業務</strong></td><td>3D点群データをBIM/CIM基礎データとして活用。設計部門と連携し一貫提供</td><td>国交省がBIM/CIM原則適用を推進中</td></tr>
+  <tr><td>2</td><td><strong>インフラ点検</strong></td><td>橋梁・河川護岸・港湾施設の3D変位計測・経年変化可視化</td><td>全国72万橋の6割超が建設後50年経過予定</td></tr>
+  <tr><td>3</td><td><strong>災害対応の強化</strong></td><td>震災・豪雨時にドローンレーザー＋マルチビームで安全かつ迅速に調査</td><td>激甚災害増加で復旧測量需要増大</td></tr>
+  <tr><td>4</td><td><strong>民間分野への事業拡大</strong></td><td>建築現況測量、メガソーラー地形計測、漁業海底マッピング等で収益基盤を多角化</td><td>再エネ・民間開発の市場拡大</td></tr>
+</table>
+<h4>人材育成の取り組み</h4>
+<ul>
+  <li>メーカー（HSDI・金井度量衡）による初回トレーニングで<strong>中核操作者3名以上</strong>を育成</li>
+  <li>OJTで3D点群データの処理・解析スキルを全社的に底上げ</li>
+  <li>BIM/CIMソフトウェアの操作研修を設計部門と連携して実施</li>
+  <li>ICTスキル習得による従業員の働きがい向上と離職率低下</li>
+</ul>
+<h4>地域経済への貢献</h4>
+<p>宮城県石巻市を拠点とする当社がICT測量の先駆者となることで、地域の建設業界全体のICT化推進に寄与。i-Construction政策の地域展開を担う企業として国の経済政策と合致。</p>
+
+<h4>3-1　労働生産性と1人当たり給与支給総額の向上</h4>
+<div class="highlight-box"><h4>賃上げ計画：年平均3.5%以上</h4>
+<table>
+  <tr><th>項目</th><th style="width:200px">金額</th></tr>
+  <tr><td>基準年（51期）給与支給総額（役員報酬除く）</td><td style="text-align:right">178,620,722円</td></tr>
+  <tr><td>　販管費（給与手当＋賞与）</td><td style="text-align:right">40,637,835円</td></tr>
+  <tr><td>　製造原価（賃金＋雑給＋賞与）</td><td style="text-align:right">137,982,887円</td></tr>
+  <tr class="total-row"><td>年間3.5%増加額</td><td style="text-align:right">約6,252,000円/年</td></tr>
+  <tr><td>1人当たり平均賃上げ額（39名）</td><td style="text-align:right">約160,000円/年</td></tr>
+</table>
+<p><strong>原資：</strong>省力化による工数削減のコスト低減効果＋高付加価値業務への進出による売上拡大</p></div>
+
+<h4>労働生産性向上計画（年平均4.0%以上）</h4>
+<table>
+  <tr><th>指標</th><th style="width:200px">第51期実績</th></tr>
+  <tr><td>付加価値額（営業利益＋人件費＋減価償却費）</td><td style="text-align:right">約224,699,000円</td></tr>
+  <tr class="total-row"><td>労働生産性（÷従業員39名）</td><td style="text-align:right">約5,762,000円/人</td></tr>
+</table>
+<p><strong>向上の道筋：</strong>(a)省力化→営業利益押し上げ→付加価値増 (b)高付加価値業務進出→売上拡大 (c)県外赤字整理と県内集中→利益率改善 (d)同一人員での受注量拡大→1人当たり生産性向上</p>
+
+<h3>4. 財務計画</h3>
+<table>
+  <tr><th>項目</th><th style="width:200px">金額</th></tr>
+  <tr><td>補助対象経費（税抜）</td><td style="text-align:right;font-weight:700">69,272,000円</td></tr>
+  <tr><td>補助金（1/2、上限3,000万）</td><td style="text-align:right;font-weight:700;color:#2980b9">30,000,000円</td></tr>
+  <tr><td>自己負担（税抜）</td><td style="text-align:right">39,272,000円</td></tr>
+  <tr><td>消費税分</td><td style="text-align:right">6,927,200円</td></tr>
+  <tr class="total-row"><td>実質必要資金</td><td style="text-align:right">46,199,200円</td></tr>
+</table>
+<h4>資金調達の確実性</h4>
+<table>
+  <tr><th>財務指標（51期BS）</th><th style="width:200px">金額</th></tr>
+  <tr><td>現金預金</td><td style="text-align:right;font-weight:700">298,396,927円</td></tr>
+  <tr><td>純資産</td><td style="text-align:right">821,174,437円</td></tr>
+  <tr><td>長期借入金残高</td><td style="text-align:right">87,764,000円</td></tr>
+</table>
+<p><strong>自己資金にて対応。</strong>現金預金（約3億円）に対し必要資金（約4,620万円）は15.5%に過ぎず、資金調達リスクは極めて低い。</p>
+
+<h3>5. 事業の実施体制とスケジュール</h3>
+<h4>社内の役割分担</h4>
+<table>
+  <tr><th>役割</th><th>担当者</th><th>業務内容</th></tr>
+  <tr><td>事業統括</td><td>佐藤圭亮（代表取締役）</td><td>全体統括、MB・ドローン運用責任者</td></tr>
+  <tr><td>書類管理</td><td>山本のぞみ（管理部）</td><td>申請書類管理、事務手続き</td></tr>
+  <tr><td>経理</td><td>佐藤保子（総務部長）</td><td>経理処理、資金管理</td></tr>
+  <tr><td>測量技術</td><td>測量部門技術者</td><td>機器操作、データ処理、現場運用</td></tr>
+</table>
+<h4>操作体制と技術力</h4>
+<table>
+  <tr><th>設備</th><th>操作体制</th><th>根拠</th></tr>
+  <tr><td>マルチビーム</td><td>最低3名操作体制を構築</td><td>HSDI社より2名x3〜4日のトレーニング受講予定</td></tr>
+  <tr><td>ドローンレーザー</td><td><strong>即日運用可能な5名体制</strong></td><td>二等技能証明2名＋民間資格3名が在籍済み</td></tr>
+</table>
+<h4>外部連携体制</h4>
+<table>
+  <tr><th>連携先</th><th>役割</th><th>進捗</th></tr>
+  <tr><td>HSDI</td><td>マルチビーム供給・トレーニング</td><td>2026.2月MTG済、見積書取得済</td></tr>
+  <tr><td>金井度量衡</td><td>ドローンレーザー供給・キャリブレーション</td><td><strong>注文書発行済（2026.1.13）</strong></td></tr>
+  <tr><td>SEALs</td><td>人材支援</td><td>担当：佐々木海</td></tr>
+  <tr><td>TWIST</td><td>補助金申請支援</td><td>担当：岩谷大輔</td></tr>
+</table>
+<h4>スケジュール</h4>
+<div class="timeline">
+  <div class="tl-item"><span class="tl-date">2026年4月上旬</span>キックオフ、見積取得・要件整理完了</div>
+  <div class="tl-item"><span class="tl-date">2026年4月17日</span>一般事業主行動計画の手続き開始リミット</div>
+  <div class="tl-item"><span class="tl-date">2026年4月中旬</span>事業計画書ドラフト完成、必要書類回収完了</div>
+  <div class="tl-item"><span class="tl-date">2026年4月下旬</span>ブラッシュアップ・最終確認</div>
+  <div class="tl-item"><span class="tl-date">2026年5月1日</span>目標提出日</div>
+  <div class="tl-item"><span class="tl-date">2026年5月15日</span>第6回公募 申請締切（17:00）</div>
+  <div class="tl-item"><span class="tl-date">2026年8月下旬</span>採択発表（予定）</div>
+  <div class="tl-item"><span class="tl-date">採択後2ヶ月以内</span>交付申請（全従業員分の賃金台帳を添付）</div>
+  <div class="tl-item"><span class="tl-date">交付決定後</span>機器発注→納入→トレーニング→本格稼働</div>
+</div>
+
+<h3>6. 補足事項</h3>
+<table>
+  <tr><th style="width:200px">項目</th><th>内容</th></tr>
+  <tr><td>パートナーシップ構築宣言</td><td>先代社長・佐藤吉則氏により2022年7月に署名済み</td></tr>
+  <tr><td>GビズIDプライム</td><td>取得済み。jGrantsでの電子申請に即時対応可能</td></tr>
+  <tr><td>株主構成</td><td>有限会社ファイン・ペイブメント100%保有。みなし大企業には該当しない</td></tr>
+  <tr><td>相見積</td><td>HSDI見積書取得済み。2社目を現在取得手続き中</td></tr>
+  <tr><td>事業承継</td><td>先代→現社長・佐藤圭亮氏への承継進行中。ICT化は次世代経営改革の柱</td></tr>
+</table>
+
+<div class="checklist">
+  <h3>提出前の必須確認事項</h3>
+  <ul>
+    <li><strong>【最重要】</strong>50期（R6.3）の損益計算書数値の抽出（スキャンPDFから）</li>
+    <li><strong>【最重要】</strong>52期（R8.3）の見込値または試算表の入手</li>
+    <li><strong>【最重要】</strong>一般事業主行動計画の策定・届出・公表の確認（4/17リミット）</li>
+    <li><strong>【最重要】</strong>事業計画書（その3）の数値計画・省力化算定シートの作成</li>
+    <li>マルチビーム測量機の2社目相見積の取得</li>
+    <li>ドローンレーザー測量機の2社目相見積の取得</li>
+    <li>マルチビームの最終見積金額の確定（値引きの適用有無）</li>
+    <li>船体改修費用の有無・金額の確認</li>
+    <li>年間案件数の算出（測量部門の過去実績ベース）</li>
+    <li>後処理時間の見積もり（省力化指数の確定に必要）</li>
+    <li>ホームページURLの確認</li>
+    <li>全従業員分の賃金台帳の準備（交付申請時に必須）</li>
+  </ul>
+</div>
+<div class="checklist" style="border-color:#27ae60;background:#eaf7ed">
+  <h3 style="color:#27ae60">加点項目の対応状況</h3>
+  <ul>
+    <li>成長加速マッチングサービスへの会員登録＋挑戦課題登録（10分程度）</li>
+    <li>省力化ナビの活用確認（第6回新設の加点）</li>
+    <li>事業承継関連書類の取得（過去5年以内の承継加点）</li>
+    <li>事業場内最低賃金引上げ加点（2025.7月時点から+63円以上の場合）</li>
+    <li>健康経営優良法人2026の認定取得（第6回新設の加点）</li>
+  </ul>
+</div>
+
+</div>
+<div class="footer">本書類はドラフト v2.0 です。<span class="tbd">要確認</span>の箇所は提出前に必ず確定してください。<br>作成日：2026年4月16日　｜　作成支援：TWIST株式会社</div>
+</div>
+</body>
+</html>
